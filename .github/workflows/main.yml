@@ -1,0 +1,15 @@
+name: Workflows with large secrets
+
+on:
+ workflow_dispatch:
+    inputs:
+      var_name:
+        description: 'CONFIG_DEV || TOKEN'     
+        required: true
+jobs:
+  get-secrets-vars:
+    name: Get Secrets Vars
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Secrets Vars
+        run: echo ${{ secrets.TESTE1}}
