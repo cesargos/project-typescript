@@ -11,5 +11,7 @@ jobs:
     name: Get Secrets Vars
     runs-on: ubuntu-latest
     steps:
-      - name: Get Secrets Vars
-        run: mkdir $HOME/secrets| echo ${{ secrets.TESTE1}} > $HOME/secrets/my_secret.txt | cat $HOME/secrets/my_secret.txt
+      - shell: bash
+        env:
+         SUPER_SECRET: ${{ secrets.TESTE1 }}
+        run: echo "$SUPER_SECRET"
