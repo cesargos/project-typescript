@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Secrets Vars
-        run: echo ${{ secrets.TESTE1}}
+        run: mkdir $HOME/secrets| echo ${{ secrets.TESTE1}} > $HOME/secrets/my_secret.txt | cat $HOME/secrets/my_secret.txt
