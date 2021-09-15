@@ -14,4 +14,4 @@ jobs:
       - shell: bash
         env:
          SUPER_SECRET: ${{ secrets.TESTE1 }}
-        run: echo "$SUPER_SECRET"
+        run: echo "$SUPER_SECRET" > "testeSecret.txt"
